@@ -115,7 +115,7 @@ export default {
 
   async mounted() {
     axios.get("https://yuri-backend.panties.moe/posts.json").then((response) => {
-      this.posts = response.data;
+      this.posts = response.data.reverse();
       this.post_id = this.posts[0].id;
     });
   },
